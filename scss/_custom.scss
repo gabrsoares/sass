@@ -1,0 +1,34 @@
+body {
+    font-family: $font-family-default;
+    font-size: $font-small;
+    color: $color-default;
+}
+
+p {
+    color: $color-04;
+    font-size: $font-normal;
+    margin-bottom: $mb;
+    text-align: $align;
+}
+
+h1 {
+    color: $color-01;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: $font-big;
+    margin-top: $mt-02;
+}
+
+h2 {
+    color: $color-02;
+    font-size: $font-medium;
+}
+
+h3 {
+    color: $color-03;
+    font-size: $font-normal;
+}
+
+header,
+footer {
+    background-color: $bg-color;
+}
