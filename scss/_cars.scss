@@ -1,12 +1,13 @@
 .cars {
     h2 {
         color: $color-02;
+        margin-top: 2rem;
     }
     li {
         color: $color-01;
     }
     a {
-        background-color: $color-default;
+        text-decoration: none;
     }
     
 }

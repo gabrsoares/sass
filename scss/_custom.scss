@@ -2,6 +2,12 @@ body {
     font-family: $font-family-default;
     font-size: $font-small;
     color: $color-default;
+    background-color: $bg-color;
+}
+
+header {
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 p {
@@ -9,13 +15,6 @@ p {
     font-size: $font-normal;
     margin-bottom: $mb;
     text-align: $align;
-}
-
-h1 {
-    color: $color-01;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: $font-big;
-    margin-top: $mt-02;
 }
 
 h2 {
@@ -31,4 +30,12 @@ h3 {
 header,
 footer {
     background-color: $bg-color;
+}
+
+footer {
+    padding-bottom: 0;
+    p {
+        color: $color-01;
+        text-align: center;
+    }
 }

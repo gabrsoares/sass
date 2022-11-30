@@ -1,7 +1,9 @@
+
 .destack {
-    h1 {
+    h2 {
         color: $color-02;
         font-size: $font-big;
+        margin-bottom: 2rem;
     }
     h5 {
         font-size: $font-small;
@@ -9,9 +11,24 @@
     img {
         width: 100%;
     }
+    span {
+        font-size: $font-big;
+        color: $color-01
+    }
     p {
-        background-color: $bg-color;
-        font-size: $font-normal;
+        font-size: 2rem;
         color: $color-01;
+    }
+
+    .destack-about {
+        background-image: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url(../images/pexels-mike-244206.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        height: 65rem;
     }
 }

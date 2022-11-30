@@ -34,9 +34,15 @@ img {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   color: #444;
+  background-color: #242424;
+}
+
+header {
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 p {
@@ -44,13 +50,6 @@ p {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   text-align: left;
-}
-
-h1 {
-  color: #ff5;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 3rem;
-  margin-top: 3rem;
 }
 
 h2 {
@@ -68,13 +67,24 @@ footer {
   background-color: #242424;
 }
 
+footer {
+  padding-bottom: 0;
+}
+footer p {
+  color: #fff;
+  text-align: center;
+}
+
 .blocks h2 {
   color: #222;
+  margin-bottom: 2rem;
 }
 .blocks ul {
   list-style-type: none;
   font-size: 1.2rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 250px;
   padding: 1rem 0;
   width: 100%;
@@ -85,6 +95,7 @@ footer {
   float: left;
   margin: 1rem 1.5rem;
   width: 30%;
+  background-color: #222;
 }
 .blocks li .img-container {
   display: block;
@@ -93,7 +104,6 @@ footer {
   width: 100%;
 }
 .blocks li a {
-  background-color: #222;
   border-radius: 5px;
   color: white;
   display: block;
@@ -101,20 +111,28 @@ footer {
   margin: 3rem auto 1.5rem;
   padding: 4px 8px;
 }
+.blocks li:nth-child(1) {
+  margin-left: 0;
+}
+.blocks li:last-child {
+  margin-right: 0;
+}
 
 .cars h2 {
   color: #999;
+  margin-top: 2rem;
 }
 .cars li {
-  color: #ff5;
+  color: #fff;
 }
 .cars a {
-  background-color: #444;
+  text-decoration: none;
 }
 
-.destack h1 {
+.destack h2 {
   color: #999;
   font-size: 3rem;
+  margin-bottom: 2rem;
 }
 .destack h5 {
   font-size: 1.2rem;
@@ -122,10 +140,55 @@ footer {
 .destack img {
   width: 100%;
 }
+.destack span {
+  font-size: 3rem;
+  color: #fff;
+}
 .destack p {
-  background-color: #242424;
-  font-size: 1.5rem;
-  color: #ff5;
+  font-size: 2rem;
+  color: #fff;
+}
+.destack .destack-about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(../images/pexels-mike-244206.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 65rem;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-info h1 {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 700;
+}
+.header-info .menu-busca .botao-busca {
+  cursor: pointer;
+}
+.header-info .menu-busca .busca-img {
+  width: 15px;
+}
+.header-info .menu-busca .menu-hamburguer {
+  cursor: pointer;
+}
+.header-info .menu-busca .menu-img {
+  width: 30px;
+}
+
+.menu-busca {
+  width: 7%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
