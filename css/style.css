@@ -54,7 +54,7 @@ p {
 
 h2 {
   color: #999;
-  font-size: 2.2rem;
+  font-size: 3rem;
 }
 
 h3 {
@@ -75,6 +75,21 @@ footer p {
   text-align: center;
 }
 
+@media (max-width: 600px) {
+  footer p {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 601px) {
+  footer p {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body {
+    margin: 0 3rem;
+  }
+}
 .blocks h2 {
   color: #222;
   margin-bottom: 2rem;
@@ -85,9 +100,9 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 250px;
   padding: 1rem 0;
   width: 100%;
+  flex-wrap: wrap;
 }
 .blocks li {
   color: #999;
@@ -99,7 +114,6 @@ footer p {
 }
 .blocks li .img-container {
   display: block;
-  height: 200px;
   overflow: hidden;
   width: 100%;
 }
@@ -118,6 +132,46 @@ footer p {
   margin-right: 0;
 }
 
+@media (max-width: 600px) {
+  .blocks ul {
+    flex-direction: column;
+  }
+  .blocks li {
+    width: 100%;
+    margin: 0 0 1rem 0;
+    height: auto;
+  }
+}
+@media (min-width: 601px) {
+  .blocks li {
+    width: 45%;
+    height: 270px;
+  }
+  .blocks li .img-container img {
+    height: 190px;
+  }
+  .blocks li:nth-child(2) {
+    margin-right: 0;
+  }
+  .blocks li:nth-child(3) {
+    margin-left: 0;
+  }
+}
+@media (min-width: 900px) {
+  .blocks li {
+    width: 30%;
+    height: 270px;
+  }
+  .blocks li .img-container img {
+    height: 190px;
+  }
+  .blocks li:first-child {
+    margin-right: 0;
+  }
+  .blocks li:nth-child(2) {
+    margin-left: 0;
+  }
+}
 .cars h2 {
   color: #999;
   margin-top: 2rem;
@@ -139,6 +193,7 @@ footer p {
 }
 .destack img {
   width: 100%;
+  height: 100%;
 }
 .destack span {
   font-size: 3rem;
@@ -149,17 +204,29 @@ footer p {
   color: #fff;
 }
 .destack .destack-about {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(../images/pexels-mike-244206.jpg);
-  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(../images/audi-md.jpg);
+  background-size: contain;
   background-repeat: no-repeat;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 65rem;
+  height: 0;
+  padding-top: 56.3%;
 }
 
+@media screen and (max-width: 600px) {
+  .destack span {
+    font-size: 2rem;
+  }
+  .destack p {
+    font-size: 1.5rem;
+  }
+  .destack .destack-about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(../images/audi-sm.jpg);
+  }
+}
 .header-info {
   display: flex;
   align-items: center;
@@ -171,11 +238,22 @@ footer p {
   font-size: 5rem;
   font-weight: 700;
 }
+.header-info .menu-busca {
+  width: auto;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
 .header-info .menu-busca .botao-busca {
   cursor: pointer;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  margin-right: 1rem;
 }
 .header-info .menu-busca .busca-img {
-  width: 15px;
+  width: 20px;
+  padding-top: 2px;
 }
 .header-info .menu-busca .menu-hamburguer {
   cursor: pointer;
@@ -184,11 +262,10 @@ footer p {
   width: 30px;
 }
 
-.menu-busca {
-  width: 7%;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
+@media screen and (max-width: 425px) {
+  .menu-busca {
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -19,7 +19,7 @@ p {
 
 h2 {
     color: $color-02;
-    font-size: $font-medium;
+    font-size: $font-big;
 }
 
 h3 {
@@ -37,5 +37,27 @@ footer {
     p {
         color: $color-01;
         text-align: center;
+    }
+}
+
+@media (max-width:600px) {
+    footer {
+        p {
+            font-size: $font-small;
+        }
+    }
+}
+
+@media (min-width:601px){
+    footer {
+        p {
+            font-size: $font-medium;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        margin: 0 3rem;
     }
 }

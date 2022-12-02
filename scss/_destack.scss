@@ -10,6 +10,7 @@
     }
     img {
         width: 100%;
+        height: 100%;
     }
     span {
         font-size: $font-big;
@@ -21,14 +22,32 @@
     }
 
     .destack-about {
-        background-image: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url(../images/pexels-mike-244206.jpg);
-        background-size: cover;
+        background-image: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url(../images/audi-md.jpg);
+        background-size: contain;
         background-repeat: no-repeat;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        height: 65rem;
+        height: 0;
+        padding-top: 56.3%;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .destack{
+        span {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        .destack-about {
+            background-image: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url(../images/audi-sm.jpg);
+        }
     }
 }
