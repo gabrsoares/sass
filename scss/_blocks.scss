@@ -1,10 +1,23 @@
+@use "sass:math";
+@import 'cars';
+
+/* 
+    BEM CSS
+    - Block
+    - Element
+    - Modifier
+
+    - Padrão de objeto / Design paterns
+
+    Exemplo : .blocks__title
+*/
+
 .blocks {
-    h2 {
-        color: $color-04;
+    &__title {
         margin-bottom: 2rem;
     }
 
-    ul {
+    &__list {
         list-style-type: none;
         font-size: $font-small;
         display: flex;
@@ -15,8 +28,8 @@
         flex-wrap: wrap;
     }
 
-    li {
-        color: $color-02;
+    &__item {
+        @extend .cars;
         display: block;
         float: left;
         margin: 1rem 1.5rem;
@@ -29,16 +42,17 @@
             width: 100%;
         }
         
-        a {
-            border-radius: 5px;
-            color: white;
-            display: block;
-            font-size: $font-medium;
-            margin: $mt-02 auto $mb;
-            padding: 4px 8px;
-        }
     }
-
+    
+    &__button {
+        border-radius: 5px;
+        display: block;
+        font-size: $font-medium;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        width: math.div(300px, 800px)* 100%;
+        padding: 4px 8px;
+    }
     li:nth-child(1){
         margin-left: 0;
     }
@@ -51,10 +65,10 @@
 
 @media (max-width:600px){
     .blocks {
-        ul {
+        &__list {
             flex-direction: column;
         }
-        li {
+        &__item {
             width: 100%;
             margin: 0 0 1rem 0;
             height: auto;
@@ -64,7 +78,7 @@
 
 @media (min-width:601px) {
     .blocks {
-        li {
+        &__item {
             width: 45%;
             height: 270px;
             .img-container {
@@ -73,10 +87,10 @@
                 }
             }
         }
-        li:nth-child(2){
+        &__item:nth-child(2){
             margin-right: 0;
         }
-        li:nth-child(3){
+        &__item:nth-child(3){
             margin-left: 0;
         }
     }
@@ -84,7 +98,7 @@
 
 @media (min-width:900px) {
     .blocks {
-        li {
+        &__item {
             width: 30%;
             height: 270px;
             .img-container {
@@ -93,10 +107,10 @@
                 }
             }
         }
-        li:first-child{
+        &__item:first-child{
             margin-right: 0;
         }
-        li:nth-child(2){
+        &__item:nth-child(2){
             margin-left: 0;
         }
     }

@@ -1,47 +1,41 @@
-.header-info{
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.header-info {
-    h1 {
+    
+    &__title {
         color: $color-01;
         font-size: 5rem;
         font-weight: 700;
     }
-    
-    .menu-busca{
+    &__menu{
         width: auto;
         justify-content: space-between;
         display: flex;
         align-items: center;
-        .botao-busca{
-            cursor: pointer;
-            height: 30px;
-            width: 30px;
-            text-align: center;
-            margin-right: 1rem;
-        }
-
-        .busca-img{
-            width: 20px;
-            padding-top: 2px;
-        }
-
-        .menu-hamburguer{
-            cursor: pointer;
-        }
-
-        .menu-img {
-            width: 30px;
-        }
+    }   
+    &__menu--busca{
+        cursor: pointer;
+        width: 20px;
+        padding-top: 2px;
+        text-align: center;
+        margin-right: 1rem;
     }
-
+    
+    &__menu--navigate{
+        cursor: pointer;
+    }
+    
+    .menu-img {
+        width: 30px;
+    }
+    
 }
 @media screen and (max-width: 425px){
-    .menu-busca{
-        width: auto;
+    .header{
+        &__menu{
+            width: auto;
+        }
     }
     
 }
